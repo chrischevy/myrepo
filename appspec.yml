@@ -1,17 +1,9 @@
 version: 0.0
 os: linux
 files:
-   - source: index.php
-     destination: /var/www/html
-permissions:
-   - object: /var/www/html
-     pattern: "**"
-     owner: apache
-     group: apache
-     mode: 755
-     type:
-       - file
+  - source: index.php
+    destination: /var/www/html
 hooks:
-   BeforeInstall:
-   AfterInstall:
-
+  BeforeInstall:
+  ApplicationStart:
+  ValidateService:
