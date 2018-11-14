@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-   - source: /
+   - source: index.php
      destination: /var/www/html
 permissions:
    - object: /var/www/html
@@ -13,11 +13,5 @@ permissions:
        - file
 hooks:
    BeforeInstall:
-    - location: scripts/installapache.sh
-      runas: root
-    - location: scripts/startapache.sh
-      runas: root
    AfterInstall:
-    - location: scripts/restartapache.sh
-      runas: root
 
